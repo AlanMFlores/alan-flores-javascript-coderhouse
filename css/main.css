@@ -1,0 +1,70 @@
+/* ##### Variables ##### */
+/* Colors */
+/*  ########## ########## ########## ##########*/
+/* Spacing */
+/* Columns Padding */
+/*  ########## ########## ########## ##########*/
+/* Typography */
+/*  ########## ########## ########## ##########*/
+/* Font Family */
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Montserrat:ital,wght@0,300;0,400;0,700;1,500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Libre Baskerville', serif; }
+
+a {
+  text-decoration: none;
+  color: #323232;
+  font-size: calc($fs-); }
+
+li {
+  list-style: none; }
+
+body {
+  background-color: #F1F1F1; }
+
+.main-hero-images img {
+  width: 300px; }
+
+.see-more-products-btn,
+.see-products-btn {
+  border: none;
+  background-color: transparent;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 300ms; }
+  .see-more-products-btn:hover,
+  .see-products-btn:hover {
+    color: #B05258; }
+
+.newsletter-email {
+  height: 33px;
+  background-color: #F1F1F1;
+  border: none; }
+
+.newsletter-btn {
+  padding: 8px 16px;
+  background-color: #B05258;
+  color: #FAFAFA;
+  font-family: 'Libre Baskerville', serif;
+  border: none;
+  cursor: pointer;
+  transition: 300ms; }
+  .newsletter-btn:hover {
+    background-color: #8b4146; }
+
+.product-card-image img {
+  width: 274px; }
+
+.footer {
+  background-color: #323232;
+  color: #FAFAFA; }

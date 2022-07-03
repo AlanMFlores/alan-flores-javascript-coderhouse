@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Libre Baskerville', serif; 
+}
+
+a {
+    text-decoration: none;
+    color: $clr-dark-color;
+    font-size: calc($fs-);
+}
+
+li {
+    list-style: none;
+}

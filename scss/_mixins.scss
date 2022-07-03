@@ -1,0 +1,27 @@
+@mixin see-products-btn {
+    border: none;
+    background-color: transparent;
+    font-family: 'Libre Baskerville', serif; 
+    font-size: $fs-buttons;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 300ms;
+
+    &:hover {
+        color: $clr-main-color;
+    }
+}
+
+@mixin newsletter-btn {
+    padding: 8px 16px;
+    background-color: $clr-main-color;
+    color: $clr-white-color;
+    font-family: 'Libre Baskerville', serif; 
+    border: none;
+    cursor: pointer;
+    transition: 300ms;
+
+    &:hover {
+        background-color: #8b4146;
+    }
+}

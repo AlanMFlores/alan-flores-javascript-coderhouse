@@ -1,4 +1,40 @@
 .footer {
+    @include columns-padding;
     background-color: $clr-dark-color;
     color: $clr-white-color;
+    padding-top: $spacing-sections-small;
+    padding-bottom: $spacing-sections-small;
+    text-align: center;
+
+    &-info {
+        ul {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: $spacing-sections-small;
+        }
+
+        &-item {
+            font-size: $fs-small;
+            font-weight: 100;
+        }
+    }
+
+    &-social-networks {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        margin-bottom: $spacing-sections-small;
+    }
+
+    .social-networks-links {
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+    }
+
+    small {
+        font-size: $fs-small;
+    }
 }

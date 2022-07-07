@@ -6,7 +6,7 @@ $clr-secondary-color: #E5BD95;
 $clr-dark-color: #323232;
 $clr-gray-placeholder: #909090;
 $clr-gray-color: #E5E5E5;
-$clr-white-color: #FAFAFA;
+$clr-white-color: #FFFFFF;
 $clr-gray-bg: #F1F1F1;
 
 /*  ########## ########## ########## ##########*/
@@ -15,10 +15,11 @@ $clr-gray-bg: #F1F1F1;
 /* Spacing */
 $spacing-var: 8px;
 
-$spacing-sections-x-small: calc($spacing-var * 3);
-$spacing-sections-small: calc($spacing-var * 6);
-$spacing-sections-medium: calc($spacing-var * 8);
-$spacing-sections-large: calc($spacing-var * 10);
+$spacing-sections-x-small: $spacing-var * 3;
+$spacing-sections-small: $spacing-var * 4;
+$spacing-sections-medium: $spacing-var * 6;
+$spacing-sections-x-medium: $spacing-var * 8;
+$spacing-sections-large: $spacing-var * 10;
 
 /* Columns Padding */
 
@@ -44,7 +45,12 @@ $fs-small: 1.4rem;
 
 /* Font Family */
 
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Montserrat:ital,wght@0,300;0,400;0,700;1,500&display=swap');
+@font-face {
+    font-family: Baskerville;
+    src: url('../fonts/BASKVILL.TTF') format('truetype');
+}
+
+// @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Montserrat:ital,wght@0,300;0,400;0,700;1,500&display=swap');
 
 
 

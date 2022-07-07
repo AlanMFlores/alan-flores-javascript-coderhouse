@@ -1,0 +1,33 @@
+.commitment {
+    @include columns-padding;
+    padding-top: $spacing-sections-small;
+    padding-bottom: $spacing-sections-small;
+    background-color: $clr-gray-bg;
+    margin-bottom: $spacing-sections-x-medium;
+
+    &-title {
+        text-align: center;
+        margin-bottom: $spacing-sections-x-small
+    }
+
+    &-image {
+        margin-bottom: $spacing-sections-x-small;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &-text {
+        text-align: center;
+    }
+
+    &-paragraph {
+        line-height: 2.4rem;
+        margin-bottom: $spacing-sections-small / 2;
+    }
+
+    &-signature {
+        font-size: $fs-tertiary-titles;
+    }
+}

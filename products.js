@@ -5,7 +5,7 @@ const products = [
         price: 600, 
         category: 'Aros', 
         stock: 5, 
-        image:'images/products/aros-arcilla-circulo-chico-blanco.jpg', 
+        image:'images/products/aros-arcilla-circulo-chico-negro.jpg', 
         variacion: [
             {
                 color: 'blanco',
@@ -140,7 +140,7 @@ const products = [
         price: 550, 
         category: 'Aros', 
         stock: 5, 
-        image:'images/products/images/products/aros-petalos-blancos.jpg', 
+        image:'images/products/aros-petalos-blancos.jpg', 
         variacion: [
             {
                 color: 'blanco',
@@ -155,7 +155,7 @@ const products = [
         price: 600, 
         category: 'Aros', 
         stock: 5, 
-        image:'images/products/', 
+        image:'images/products/aros-arcilla-redondos-salmon.jpg', 
         variacion: [
             {
                 color: 'blanco',
@@ -255,3 +255,29 @@ function findCategory(category) {
 }
 
 console.log(findCategory(userCategorySearch))
+
+
+// Renderizado de productos en inicio
+
+let productGrids = document.querySelector('.featured-products-grid');
+
+for (const product of products) {
+    let card = document.createElement('div');
+    card.className = 'product-card'
+    card.innerHTML = ` <div class="product-card-image">
+                            <img src=${product.image} alt="product card image">
+                        </div>
+                        <div class="product-card-description">
+                            <div class="product-card-info">
+                                <h3 class="product-card-name">${product.name}</h3>
+                                <p class="product-card-price">$${product.price.toFixed(2)}</p>
+                            </div>
+                            <div class="product-card-stars">
+                                <img src="images/stars.png" alt="product card stars">
+                            </div>
+                        </div>
+    `
+    productGrids.append(card);
+}
+
+

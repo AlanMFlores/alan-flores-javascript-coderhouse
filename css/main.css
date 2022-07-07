@@ -7,7 +7,10 @@
 /* Typography */
 /*  ########## ########## ########## ##########*/
 /* Font Family */
-@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Montserrat:ital,wght@0,300;0,400;0,700;1,500&display=swap");
+@font-face {
+  font-family: Baskerville;
+  src: url("../fonts/BASKVILL.TTF") format("truetype"); }
+
 * {
   margin: 0;
   padding: 0;
@@ -17,18 +20,46 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: 'Libre Baskerville', serif; }
+  font-family: Baskerville, serif; }
+
+li {
+  list-style: none; }
 
 a {
   text-decoration: none;
   color: #323232;
   font-size: calc($fs-); }
 
-li {
-  list-style: none; }
+h1 {
+  font-size: 3.2rem;
+  font-weight: 400; }
+  @media only screen and (min-width: 768px) {
+    h1 {
+      font-size: 4rem; } }
+  @media only screen and (min-width: 1024px) {
+    h1 {
+      font-size: 7.2rem; } }
+
+h2 {
+  font-size: 2.4rem;
+  font-weight: 400; }
+  @media only screen and (min-width: 768px) {
+    h2 {
+      font-size: 3.2rem; } }
+  @media only screen and (min-width: 1024px) {
+    h2 {
+      font-size: 4.8rem; } }
+
+h3 {
+  font-size: 1.6rem;
+  font-weight: 400; }
+
+p {
+  font-size: 1.6rem;
+  font-weight: 400; }
 
 body {
-  background-color: #F1F1F1; }
+  background-color: #FFFFFF; }
 
 .main-hero-images img {
   width: 300px; }
@@ -39,7 +70,7 @@ body {
   background-color: transparent;
   font-family: 'Libre Baskerville', serif;
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 400;
   cursor: pointer;
   transition: 300ms; }
   .see-more-products-btn:hover,
@@ -54,7 +85,7 @@ body {
 .newsletter-btn {
   padding: 8px 16px;
   background-color: #B05258;
-  color: #FAFAFA;
+  color: #FFFFFF;
   font-family: 'Libre Baskerville', serif;
   border: none;
   cursor: pointer;
@@ -62,9 +93,209 @@ body {
   .newsletter-btn:hover {
     background-color: #8b4146; }
 
-.product-card-image img {
-  width: 274px; }
+.header {
+  padding: 0 24px;
+  display: flex;
+  justify-content: center;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  background-color: #F1F1F1; }
+  @media only screen and (min-width: 768px) {
+    .header {
+      padding: 0 72px; } }
+  @media only screen and (min-width: 1024px) {
+    .header {
+      padding: 0 144px; } }
+  .header-logo {
+    margin-bottom: 24px; }
+  .header .hamb-menu-btn {
+    border: none;
+    background-color: transparent; }
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .nav--left-side, .nav--right-side {
+    display: none; }
+
+.main-hero {
+  padding: 0 24px;
+  display: grid;
+  justify-content: center;
+  padding-bottom: 48px;
+  background-color: #F1F1F1; }
+  @media only screen and (min-width: 768px) {
+    .main-hero {
+      padding: 0 72px; } }
+  @media only screen and (min-width: 1024px) {
+    .main-hero {
+      padding: 0 144px; } }
+  .main-hero-text {
+    text-align: center; }
+  .main-hero-category {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1.6rem;
+    margin-bottom: 24px; }
+  .main-hero-title {
+    font-size: 3.2rem; }
+  .main-hero-images img {
+    mix-blend-mode: multiply;
+    margin-bottom: 8px; }
+
+.featured-products {
+  padding: 0 24px;
+  padding-top: 64px;
+  text-align: center;
+  background-color: #FFFFFF; }
+  @media only screen and (min-width: 768px) {
+    .featured-products {
+      padding: 0 72px; } }
+  @media only screen and (min-width: 1024px) {
+    .featured-products {
+      padding: 0 144px; } }
+  .featured-products-title {
+    margin-bottom: 24px; }
+
+.categories {
+  padding: 0 24px;
+  display: grid;
+  background-color: #FFFFFF;
+  margin-bottom: 64px; }
+  @media only screen and (min-width: 768px) {
+    .categories {
+      padding: 0 72px; } }
+  @media only screen and (min-width: 1024px) {
+    .categories {
+      padding: 0 144px; } }
+  .categories-title {
+    text-align: center;
+    margin-bottom: 24px; }
+  .categories-block {
+    display: grid;
+    place-content: center;
+    width: 100%;
+    height: 308px;
+    margin-bottom: 16px;
+    background-color: #F1F1F1; }
+    .categories-block img {
+      mix-blend-mode: multiply; }
+
+.featured-products-grid {
+  display: grid;
+  justify-content: center; }
+
+.product-card {
+  width: 274px;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 32px; }
+  .product-card h3 {
+    font-weight: 600; }
+  .product-card-image {
+    position: relative; }
+    .product-card-image:before {
+      content: '';
+      position: absolute;
+      width: 274px;
+      height: 274px;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: #F1F1F1; }
+  .product-card-image img {
+    width: 274px;
+    margin-bottom: 8px;
+    mix-blend-mode: multiply; }
+  .product-card-description {
+    display: flex;
+    justify-content: space-between; }
+  .product-card-info {
+    text-align: left; }
+  .product-card-name {
+    margin-bottom: 4px; }
+
+.see-more-products-btn {
+  margin-bottom: 64px; }
+
+.commitment {
+  padding: 0 24px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background-color: #F1F1F1;
+  margin-bottom: 64px; }
+  @media only screen and (min-width: 768px) {
+    .commitment {
+      padding: 0 72px; } }
+  @media only screen and (min-width: 1024px) {
+    .commitment {
+      padding: 0 144px; } }
+  .commitment-title {
+    text-align: center;
+    margin-bottom: 24px; }
+  .commitment-image {
+    margin-bottom: 24px; }
+    .commitment-image img {
+      width: 100%; }
+  .commitment-text {
+    text-align: center; }
+  .commitment-paragraph {
+    line-height: 2.4rem;
+    margin-bottom: 16px; }
+  .commitment-signature {
+    font-size: 3.2rem; }
+
+.newsletter {
+  padding: 0 24px;
+  text-align: center;
+  padding-bottom: 48px; }
+  @media only screen and (min-width: 768px) {
+    .newsletter {
+      padding: 0 72px; } }
+  @media only screen and (min-width: 1024px) {
+    .newsletter {
+      padding: 0 144px; } }
+  .newsletter-title {
+    margin-bottom: 24px; }
+  .newsletter-description {
+    margin-bottom: 24px; }
+  .newsletter-email {
+    padding: 16px; }
+  .newsletter-email, .newsletter-btn {
+    width: 100%;
+    height: 48px;
+    margin-bottom: 16px;
+    font-size: 1.6rem; }
 
 .footer {
+  padding: 0 24px;
   background-color: #323232;
-  color: #FAFAFA; }
+  color: #FFFFFF;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  text-align: center; }
+  @media only screen and (min-width: 768px) {
+    .footer {
+      padding: 0 72px; } }
+  @media only screen and (min-width: 1024px) {
+    .footer {
+      padding: 0 144px; } }
+  .footer-info ul {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px; }
+  .footer-info-item {
+    font-size: 1.4rem;
+    font-weight: 100; }
+  .footer-social-networks {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 32px; }
+  .footer .social-networks-links ul {
+    display: flex;
+    align-items: center;
+    gap: 16px; }
+  .footer small {
+    font-size: 1.4rem; }

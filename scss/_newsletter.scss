@@ -1,0 +1,25 @@
+.newsletter {
+    @include columns-padding;
+    text-align: center;
+    padding-bottom: $spacing-sections-medium;
+
+    &-title {
+        margin-bottom: $spacing-sections-x-small;
+    }
+
+    &-description {
+        margin-bottom: $spacing-sections-x-small;
+    }
+
+    &-email {
+        padding: 16px;
+    }
+
+    &-email, &-btn {
+        width: 100%;
+        height: 48px;
+        margin-bottom: $spacing-sections-small / 2;
+        font-size: $fs-copy;
+    }
+
+}

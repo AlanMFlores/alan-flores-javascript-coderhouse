@@ -6,11 +6,21 @@
     padding-bottom: $spacing-sections-small;
     text-align: center;
 
+    @include media(x-medium-dev) {
+        padding-top: $spacing-sections-small;
+        padding-bottom: $spacing-sections-small;
+    }
+
     &-info {
         ul {
             display: flex;
             justify-content: space-between;
             margin-bottom: $spacing-sections-small;
+
+            @include media(x-medium-dev) {
+                justify-content: center;
+                gap: 24px;
+            }
         }
 
         &-item {
@@ -22,6 +32,7 @@
     &-social-networks {
         display: flex;
         justify-content: center;
+        align-items: center;
         gap: 16px;
         margin-bottom: $spacing-sections-small;
     }

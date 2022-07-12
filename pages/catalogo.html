@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Catálogo | FAE</title>
+</head>
+<body>
+    <div class="main-wrapper">
+        <header class="header">
+            <nav class="nav">
+                <div class="nav--left-side">
+                    <ul>
+                        <li class="nav--list-item">
+                            <a href="/index.html">Home</a>
+                        </li>
+                        <li class="nav--list-item">
+                            <a href="#">Catálogo</a>
+                        </li>
+                        <li class="nav--list-item">
+                            <a href="#">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+                <figure class="header-logo">
+                    <a href="../index.html">
+                        <img src="../images/fae-logo.png" alt="header-logo" class="header-logo-img">
+                    </a>
+                </figure>
+                <button class="hamb-menu-btn">
+                    <img src="/images/hamb-menu.png" alt="boton menu mobile">
+                </button>
+                <div class="nav--right-side">
+                    <ul>
+                        <li class="nav--list-item">
+                            <a href="">Registrarse/Iniciar Sesión</a>
+                        </li>
+                        <li class="nav--list-item">
+                            <a href=""><img src="/images/cart-icon.png" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main class="catalogue">
+            <h1 class="catalogue-title">Catálogo</h1>
+
+            <button class="catalogue-filters-display-btn" id="show-filters">Filtros</button>
+
+            <section class="catalogue-filters">
+                <button class="back-btn" id="back-btn"><img src="../images/arrow-back.png" alt=""></button>
+                <h2 class="catalogue-filters-title">Filtrar por</h2>
+
+                <div class="catalogue-filters-form">
+                    <form action="">
+                        <label for="product-name">Nombre del Producto</label>
+                        <input type="text" name="" id="product-name" class="catalogue-filters-input" placeholder="Aros Redondos">
+                        <input type="button" value="Buscar Producto" id="product-name-submit" class="catalogue-filters-btn">
+                    </form>
+                </div>
+
+                <div class="catalogue-filters-form">
+                    <form action="">
+                        <label for="">Indicar mínimo y máximo</label>
+                        <input type="number" name="" id="" class="catalogue-filters-input" placeholder="400">
+                        <input type="number" name="" id="" class="catalogue-filters-input" placeholder="1200">
+                        <input type="button" value="Filtrar por Precio" class="catalogue-filters-btn">
+                    </form>
+                </div>
+                <div class="catalogue-filters-form">
+                    <form action="">
+                        <label for="">Indicar Color</label>
+                        <input type="text" name="" id="" class="catalogue-filters-input" placeholder="Verde">
+                        <input type="button" value="Filtrar por Color" class="catalogue-filters-btn">
+                    </form>
+                </div>
+                <div class="catalogue-filters-form">
+                    <form action="">
+                        <label for="">Nombre de la Categoría</label>
+                        <input type="text" name="" id="" class="catalogue-filters-input" placeholder="Pulseras">
+                        <input type="button" value="Filtrar por Categoría" class="catalogue-filters-btn">
+                    </form>
+                </div>
+
+            </section>
+
+            <section class="catalogue-products">
+
+            </section>
+
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-info">
+                <ul>
+                    <li class="footer-info-item">Política de Privacidad</li>
+                    <li class="footer-info-item">Información Legal</li>
+                    <li class="footer-info-item">Contacto</li>
+                </ul>
+            </div>
+            <div class="divisory-line"></div>
+            <div class="footer-social-networks">
+                <p class="social-networks">Redes Sociales:</p>
+                <div class="social-networks-links">
+                    <ul>
+                        <li class="social-networks-item">
+                            <a href="#">
+                                <img src="../images/facebook-icon.png" alt="">
+                            </a>
+                        </li>
+                        <li class="social-networks-item">
+                            <a href="#">
+                                <img src="../images/instagram-icon.png" alt="">
+                            </a>
+                        </li>
+                        <li class="social-networks-item">
+                            <a href="#">
+                                <img src="../images/pinterest-icon.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <small>Designed by Alan Flores - 2022</small>
+        </footer>
+    </div>
+
+    <script src="https://kit.fontawesome.com/549c3d58c0.js" crossorigin="anonymous"></script>
+    <script src="/catalogue.js"></script>
+</body>
+</html>

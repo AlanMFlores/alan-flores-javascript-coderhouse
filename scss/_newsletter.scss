@@ -3,23 +3,43 @@
     text-align: center;
     padding-bottom: $spacing-sections-medium;
 
+    @include media(x-medium-dev) {
+        padding-bottom: $spacing-sections-x-medium;
+    }
+
+    &-form {
+        display: flex;
+        justify-content: center;
+    }
+
     &-title {
         margin-bottom: $spacing-sections-x-small;
     }
 
     &-description {
+        margin: 0 auto;
         margin-bottom: $spacing-sections-x-small;
+        max-width: 500px;
+
     }
 
     &-email {
         padding: 16px;
+        height: 33px;
+        background-color: $clr-gray-bg;
+        border: none;
     }
 
     &-email, &-btn {
         width: 100%;
+        max-width: 400px;
         height: 48px;
         margin-bottom: $spacing-sections-small / 2;
         font-size: $fs-copy;
+    }
+
+    &-btn {
+        @include newsletter-btn;
     }
 
 }

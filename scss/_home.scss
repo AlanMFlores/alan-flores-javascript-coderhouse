@@ -2,26 +2,14 @@ body {
     background-color: $clr-white-color;
 }
 
-.main-hero-images {
-    img {
-        width: 300px;
-    }
-}
-
 .see-more-products-btn,
 .see-products-btn  {
     @include see-products-btn;
 }
 
-.newsletter {
-
-    &-email {
-        height: 33px;
-        background-color: $clr-gray-bg;
-        border: none;
+.see-products-btn {
+    @include media(x-medium-dev) {
+        text-align: left;
     }
 }
 
-.newsletter-btn {
-    @include newsletter-btn;
-}

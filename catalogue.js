@@ -267,65 +267,59 @@ const products = [
 
 ]
 
-// Filtro de productos por precio
+// Catálogo Container
 
-function priceFilter(products, price) {
-    let prices = []
-    for(let i=0; i < products.length; i++) {
-        if(products[i].price <= price) {
-            prices.push(`- ${products[i].name}`)
-        }
-    }
-    let listedProducts = prices.join(' ')
-    return `Los productos con valores menores a $${price} son: ${listedProducts}`;
-}
+let catalogueGrid = document.querySelector('.catalogue-products');
 
-// Funcion para buscar productos por nombre
 
-function findProduct(product) {
-    let matchProductName = product.toLowerCase();
+// Modal de Filtros
+
+const filters = document.querySelector('.catalogue-filters');
+const showFilters = document.getElementById('show-filters')
+const backBtn = document.getElementById('back-btn');
+
+
+// Evento para mostrar los filtros
+
+showFilters.addEventListener('click', () => {
+    filters.classList.add('show-filters')
+})
+
+backBtn.addEventListener('click', () => {
+    filters.classList.remove('show-filters')
+})
+
+
+// Filtros
+
+// Filtro por nombre
+
+let filterNameBtn = document.getElementById('product-name-submit');
+
+filterNameBtn.addEventListener('click', () => {
+    let filterName = document.getElementById('product-name').value;
+    let matchProductName = filterName.toLowerCase();
     let productFound = products.filter(prod => prod.name.toLowerCase().includes(matchProductName));
-    let matchedProducts = [];
-    for(let i=0; i < productFound.length; i++) {
-        matchedProducts.push(productFound[i].name);
-    }
-    return matchedProducts;
-}
 
-
-// Funcion para buscar productos por categoría
-
-function findCategory(category) {
-    let matchCategoryName = category.toLowerCase();
-    let productFound = products.filter(cat => cat.category.toLowerCase().includes(matchCategoryName));
-    let matchedProducts = [];
-    for(let i=0; i < productFound.length; i++) {
-        matchedProducts.push(productFound[i].name);
-    }
-    return matchedProducts;
-}
-
-// Renderizado de productos en inicio
-
-let productGrids = document.querySelector('.featured-products-grid');
-
-for (const product of products) {
-    let card = document.createElement('div');
-    card.className = 'product-card'
-    card.innerHTML = ` <div class="product-card-image">
-                            <img src=${product.image} alt="product card image">
-                        </div>
-                        <div class="product-card-description">
-                            <div class="product-card-info">
-                                <p class="product-card-name">${product.name}</p>
-                                <p class="product-card-price">$${product.price.toFixed(2)}</p>
+    for (const product of productFound) {
+        let card = document.createElement('div');
+        card.className = 'product-card'
+        card.innerHTML = ` <div class="product-card-image">
+                                <img src=${product.image} alt="product card image">
                             </div>
-                            <div class="product-card-stars">
-                                <img src="images/stars.png" alt="product card stars">
+                            <div class="product-card-description">
+                                <div class="product-card-info">
+                                    <p class="product-card-name">${product.name}</p>
+                                    <p class="product-card-price">$${product.price.toFixed(2)}</p>
+                                </div>
+                                <div class="product-card-stars">
+                                    <img src="/images/stars.png" alt="product card stars">
+                                </div>
                             </div>
-                        </div>
-    `
-    productGrids.append(card);
-}
+        `
+        catalogueGrid.append(card);
+    }
 
+    filters.classList.remove('show-filters')
 
+});

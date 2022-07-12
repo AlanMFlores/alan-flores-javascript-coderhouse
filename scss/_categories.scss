@@ -7,6 +7,10 @@
     &-title {
         text-align: center;
         margin-bottom: $spacing-sections-x-small;
+
+        @include media(x-medium-dev) {
+            margin-bottom: $spacing-sections-medium;
+        }
     }
 
     &-block {
@@ -17,8 +21,20 @@
         margin-bottom: $spacing-sections-small / 2;
         background-color: $clr-gray-bg;
 
+        @include media(x-medium-dev) {
+            margin-bottom: 0;
+        }
+
         img {
             mix-blend-mode: multiply;
+        }
+    }
+
+    &-grid {
+        @include media(x-medium-dev) {
+            display: grid;
+            grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+            gap: 16px;
         }
     }
 }

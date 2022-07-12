@@ -13,17 +13,42 @@
     .hamb-menu-btn {
         border: none;
         background-color: transparent;
+
+        @include media(large-dev) {
+            display: none;
+        }
     }
 
-}
+    @include media(x-medium-dev) {
+        padding-top: $spacing-sections-x-medium;
+        padding-bottom: $spacing-sections-x-medium;
+    }
 
-.nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include media(large-dev) {
+            flex-direction: row;
+            gap: 64px;
+        }
+        
+        &--left-side, &--right-side {
+            display: none;
+
+            @include media(large-dev) {
+                display: block;
+            }
+
+            ul {
+                @include media(large-dev) {
+                    display: flex;
+                    align-items: center;
+                    gap: 32px
+                }
+            }
+        }
     
-    &--left-side, &--right-side {
-        display: none;
     }
-
 }

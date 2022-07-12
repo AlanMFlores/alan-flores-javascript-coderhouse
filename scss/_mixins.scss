@@ -1,4 +1,5 @@
 @mixin see-products-btn {
+    display: block;
     border: none;
     background-color: transparent;
     font-family: 'Libre Baskerville', serif; 
@@ -34,7 +35,7 @@
         font-size: 4rem;
     }
 
-    @include media(large-dev) {
+    @include media(x-large-dev) {
         font-size: 7.2rem;
     }
 }
@@ -47,7 +48,7 @@
         font-size: 3.2rem;
     }
 
-    @include media(large-dev) {
+    @include media(x-large-dev) {
         font-size: 4.8rem;
     }
 }
@@ -55,6 +56,10 @@
 @mixin tertiary-title {
     font-size: 1.6rem;
     font-weight: 400;
+
+    @include media(medium-dev) {
+        font-size: 2.4rem;
+    }
 }
 
 @mixin paragraph {
@@ -69,7 +74,7 @@
         padding: $columns-padding-tablet;
     }
 
-    @include media(large-dev) {
+    @include media(x-large-dev) {
         padding: $columns-padding-desktop
     }
 }

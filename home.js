@@ -9,8 +9,8 @@ const renderFeaturedProducts = () => {
         let card = document.createElement('div');
         card.classList.add('product-card', product.category);
         card.innerHTML = ` <div class="product-card-image">
-                                <a href='../${product.link}'>
-                                    <img src=../${product.image} alt="product card image">
+                                <a href='${product.link}'>
+                                    <img src=${product.image} alt="product card image">
                                 </a>
                             </div>
                             <div class="product-card-description">

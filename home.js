@@ -19,7 +19,7 @@ const renderFeaturedProducts = () => {
                                     <p class="product-card-price">$${product.price.toFixed(2)}</p>
                                 </div>
                                 <div class="product-card-stars">
-                                    <img src="../images/stars.png" alt="product card stars">
+                                    <img src="./images/stars.png" alt="product card stars">
                                 </div>
                             </div>
         `

@@ -1,8 +1,24 @@
+// Modal de Filtros
+
+const filters = document.querySelector('.catalogue-filters');
+const showFilters = document.getElementById('show-filters')
+const backBtn = document.getElementById('back-btn');
+
+// Evento para mostrar los filtros
+
+showFilters.addEventListener('click', () => {
+    filters.classList.add('show-filters')
+})
+
+backBtn.addEventListener('click', () => {
+    filters.classList.remove('show-filters')
+})
+
 // Catálogo Container
 
 let catalogueGrid = document.querySelector('.catalogue-products');
 
-// Render de Productos
+// Render de Productos en Catálogo
 
 const renderProducts = () => {
     for (const product of products) {

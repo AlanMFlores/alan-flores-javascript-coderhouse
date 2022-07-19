@@ -1,0 +1,50 @@
+.favorites {
+    @include columns-padding;
+    padding-top: $spacing-sections-small;
+
+    p {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .breadcrumbs {
+        margin-bottom: $spacing-sections-x-small;
+        
+        p {
+            font-weight: 300;
+            font-size: 1.2rem;
+        }
+    }
+
+    h1 {
+        margin-bottom: $spacing-sections-x-small;
+    }
+
+    &-list {
+        margin-bottom: $spacing-sections-x-medium;
+
+        &-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: $spacing-sections-x-small;
+
+            img {
+                width: 88px;
+            }
+
+            &-info {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                .delete {
+                    border: none;
+                    background-color: transparent;
+                    color: $clr-main-color;
+                }
+            }
+        }
+    }
+
+
+}

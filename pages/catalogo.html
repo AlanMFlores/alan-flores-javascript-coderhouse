@@ -10,39 +10,41 @@
 <body>
     <div class="main-wrapper">
         <header class="header">
+            <figure class="header-logo">
+                <a href="../index.html">
+                    <img src="../images/fae-logo.png" alt="header-logo" class="header-logo-img">
+                </a>
+            </figure>
+
             <nav class="nav">
-                <div class="nav--left-side">
-                    <ul>
+                <div class="nav--list">
+                    <ul class="nav--list-menu">
                         <li class="nav--list-item">
-                            <a href="../index.html">Home</a>
+                            <a href="#">Home</a>
                         </li>
                         <li class="nav--list-item">
-                            <a href="#">Catálogo</a>
+                            <a href="../pages/catalogo.html">Catálogo</a>
                         </li>
                         <li class="nav--list-item">
                             <a href="#">Contacto</a>
                         </li>
-                    </ul>
-                </div>
-                <figure class="header-logo">
-                    <a href="../index.html">
-                        <img src="../images/fae-logo.png" alt="header-logo" class="header-logo-img">
-                    </a>
-                </figure>
-                <button class="hamb-menu-btn">
-                    <img src="../images/hamb-menu.png" alt="boton menu mobile">
-                </button>
-                <div class="nav--right-side">
-                    <ul>
                         <li class="nav--list-item">
                             <a href="">Registrarse/Iniciar Sesión</a>
                         </li>
                         <li class="nav--list-item">
+                            <a href="../pages/favorites.html">Favoritos</a>
+                        </li>
+                        <li class="nav--list-item">
                             <a href=""><img src="../images/cart-icon.png" alt=""></a>
                         </li>
+                        <img src="../images/close.png" alt="" class="close-menu">
                     </ul>
                 </div>
+               
             </nav>
+            <button class="hamb-menu-btn">
+                <img src="../images/hamb-menu.png" alt="boton menu mobile">
+            </button>
         </header>
 
         <main class="catalogue">
@@ -53,6 +55,14 @@
             <section class="catalogue-filters">
                 <button class="back-btn" id="back-btn"><img src="../images/arrow-back.png" alt=""></button>
                 <h2 class="catalogue-filters-title">Filtrar por</h2>
+
+                <div class="catalogue-filters-categories">
+                    <button class="categories-filter-btn" id="todos">Todos</button>
+                    <button class="categories-filter-btn" id="aros">Aros</button>
+                    <button class="categories-filter-btn" id="aros-arcilla">Aros de Arcilla</button>
+                    <button class="categories-filter-btn" id="collares">Collares</button>
+                    <button class="categories-filter-btn" id="pulseras">Pulseras</button>
+                </div>
 
                 <div class="catalogue-filters-form">
                     <form action="">
@@ -73,17 +83,17 @@
                 <div class="catalogue-filters-form">
                     <form action="">
                         <label for="">Indicar Color</label>
-                        <input type="text" name="" id="" class="catalogue-filters-input" placeholder="Verde">
-                        <input type="button" value="Filtrar por Color" class="catalogue-filters-btn">
+                        <input type="text" name="" id="product-color" class="catalogue-filters-input" placeholder="Verde">
+                        <input type="button" value="Filtrar por Color" id="product-color-submit" class="catalogue-filters-btn">
                     </form>
                 </div>
-                <div class="catalogue-filters-form">
+                <!-- <div class="catalogue-filters-form">
                     <form action="">
                         <label for="">Nombre de la Categoría</label>
                         <input type="text" name="" id="" class="catalogue-filters-input" placeholder="Pulseras">
                         <input type="button" value="Filtrar por Categoría" class="catalogue-filters-btn">
                     </form>
-                </div>
+                </div> -->
 
             </section>
 
@@ -129,7 +139,8 @@
         </footer>
     </div>
 
-    <script src="https://kit.fontawesome.com/549c3d58c0.js" crossorigin="anonymous"></script>
+    <script src="../products.js"></script>
+    <script src="../animations.js"></script>
     <script src="../catalogue.js"></script>
 </body>
 </html>

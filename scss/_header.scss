@@ -1,13 +1,14 @@
 .header {
     @include columns-padding;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     padding-top: $spacing-sections-medium;
     padding-bottom: $spacing-sections-medium;
     background-color: $clr-gray-bg;
 
     &-logo {
-        margin-bottom: $spacing-sections-x-small;
+        margin-bottom: $spacing-sections-small;
     }
 
     .hamb-menu-btn {
@@ -33,22 +34,51 @@
             flex-direction: row;
             gap: 64px;
         }
-        
-        &--left-side, &--right-side {
-            display: none;
 
-            @include media(large-dev) {
-                display: block;
-            }
+        &--list {
 
-            ul {
+            &-menu {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 32px;
+                background: white;
+                width: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 10;
+                transition: 300ms;
+                transform: translateY(-100%);
+
                 @include media(large-dev) {
-                    display: flex;
-                    align-items: center;
-                    gap: 32px
+                    position: static;
+                    transform: translateY(0);
+                    background-color: transparent;
+                    flex-direction: row;
+                    gap: 64px;
                 }
             }
+
+            .close-menu {
+                position: absolute;
+                top: 16px;
+                right: 16px;
+                width: 32px;
+
+                @include media(large-dev) {
+                    display: none;
+                }
+            }
+
+            .show-menu {
+                transform: translateY(0);
+            }
         }
-    
+        
     }
+
 }

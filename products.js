@@ -1,331 +1,515 @@
 const products = [
     {
-        name:'Aros Circulares',
         id: '001',
+        name:'Aros Circulares',
         price: 600, 
-        category: 'Aros', 
+        category: 'aros-arcilla',
+        link: 'products/aros-arcilla/aros-circulares.html', 
         stock: 5,
-        image:'./images/products/aros-arcilla/aros-arcilla-circulo-chico-negro.jpg', 
+        image:'images/products/aros-arcilla/aros-arcilla-circulo-chico-negro.jpg', 
         variacion: [
             {
-                color: 'blanco',
                 id: '001BL',
-                image: './images/products/aros-arcilla/aros-arcilla-circulo-chico-blanco.jpg'
+                color: 'blanco',
+                image: 'images/products/aros-arcilla/aros-arcilla-circulo-chico-blanco.jpg'
             },
             {
-                color: 'amarillo',
                 id: '001AM',
-                image: './images/products/aros-arcilla/aros-arcilla-circulo-chico-amarillo.jpg'
+                color: 'amarillo',
+                image: 'images/products/aros-arcilla/aros-arcilla-circulo-chico-amarillo.jpg'
             },
             {
+                id: '001MD',
                 color: 'mandarina',
-                id: '001NR',
-                image: './images/products/aros-arcilla/aros-arcilla-circulo-chico-mandarina.jpg'
+                image: 'images/products/aros-arcilla/aros-arcilla-circulo-chico-mandarina.jpg'
             },
             {
-                color: 'negro',
                 id: '001NE',
-                image: './images/products/aros-arcilla/aros-arcilla-circulo-chico-negro.jpg'
+                color: 'negro',
+                image: 'images/products/aros-arcilla/aros-arcilla-circulo-chico-negro.jpg'
             },
             {
-                color: 'verde',
                 id: '001VD',
-                image: './images/products/aros-arcilla/aros-arcilla-circulo-chico-verde.jpg'
+                color: 'verde',
+                image: 'images/products/aros-arcilla/aros-arcilla-circulo-chico-verde.jpg'
             },
             {
-                color: 'salmón',
                 id: '001SL',
-                image: './images/products/aros-arcilla/aros-arcilla-circulo-chico-salmon.jpg'
+                color: 'salmón',
+                image: 'images/products/aros-arcilla/aros-arcilla-circulo-chico-salmon.jpg'
             },
             {
-                color: 'rojo',
                 id: '001RO',
-                image: './images/products/aros-arcilla/aros-arcilla-circulo-chico-rojo.jpg'
+                color: 'rojo',
+                image: 'images/products/aros-arcilla/aros-arcilla-circulo-chico-rojo.jpg'
             }
         ]
     },
     {
-        name:'Aros Botones', 
         id: '002', 
+        name:'Aros Botones', 
         price: 520, 
-        category: 'Aros', 
+        category: 'aros-arcilla',
+        link: 'products/aros-arcilla/aros-botones.html', 
         stock: 5, 
-        image:'./images/products/aros-arcilla/aros-arcilla-botones-negro-naranja.jpg', 
+        image:'images/products/aros-arcilla/aros-arcilla-botones-negro-naranja.jpg', 
         variacion: [
             {
-                color: 'negro',
                 id: '002NE',
-                image: './images/products/aros-arcilla/aros-arcilla-botones-negro.jpg'
+                color: 'negro',
+                image: 'images/products/aros-arcilla/aros-arcilla-botones-negro.jpg'
             },
             {
-                color: 'blanco',
                 id: '002BL',
-                image: './images/products/aros-arcilla/aros-arcilla-botones-blanco.jpg'
+                color: 'blanco',
+                image: 'images/products/aros-arcilla/aros-arcilla-botones-blanco.jpg'
             },
             {
-                color: 'negro-naranja',
                 id: '002N-N',
-                image: './images/products/aros-arcilla/aros-arcilla-botones-negro-naranja.jpg'
+                color: 'negro-naranja',
+                image: 'images/products/aros-arcilla/aros-arcilla-botones-negro-naranja.jpg'
             },
             {
-                color: 'blanco-naranja',
                 id: '002B-N',
-                image: './images/products/aros-arcilla/aros-arcilla-botones-blanco-naranja.jpg'
+                color: 'blanco-naranja',
+                image: 'images/products/aros-arcilla/aros-arcilla-botones-blanco-naranja.jpg'
             }
         ]
     },
     {
-        name:'Aros Animal Print', 
         id: '003', 
+        name:'Aros Animal Print', 
         price: 550, 
-        category: 'Aros', 
+        category: 'aros-arcilla', 
+        link: 'products/aros-arcilla/aros-animal-print.html', 
         stock: 5, 
-        image:'./images/products/aros-arcilla/aros-animal-print-rojo.jpg', 
+        image:'images/products/aros-arcilla/aros-animal-print-rojo.jpg', 
         variacion: [
             {
                 color: 'blanco',
                 id: '003BL',
-                image: './images/products/aros-arcilla/aros-animal-print-blanco.jpg'
+                image: 'images/products/aros-arcilla/aros-animal-print-blanco.jpg'
             },
             {
                 color: 'rojo',
                 id: '003RO',
-                image: './images/products/aros-arcilla/aros-animal-print-rojo.jpg'
+                image: 'images/products/aros-arcilla/aros-animal-print-rojo.jpg'
             },
             {
                 color: 'verde',
                 id: '003VD',
-                image: './images/products/aros-arcilla/aros-animal-print-verde.jpg'
+                image: 'images/products/aros-arcilla/aros-animal-print-verde.jpg'
             },
             {
                 color: 'mandarina',
                 id: '003MN',
-                image: './images/products/aros-arcilla/aros-animal-print-mandarina.jpg'
+                image: 'images/products/aros-arcilla/aros-animal-print-mandarina.jpg'
             },
             {
                 color: 'mostaza',
                 id: '003MZ',
-                image: './images/products/aros-arcilla/aros-animal-print-mostaza.jpg'
+                image: 'images/products/aros-arcilla/aros-animal-print-mostaza.jpg'
             },
             {
                 color: 'naranja',
                 id: '003NR',
-                image: './images/products/aros-arcilla/aros-animal-print-naranja.jpg'
+                image: 'images/products/aros-arcilla/aros-animal-print-naranja.jpg'
             }
         ]
     },
     {
-        name:'Aros Barquitos', 
         id: '004', 
+        name:'Aros Barquitos', 
         price: 540, 
-        category: 'Aros', 
+        category: 'aros-arcilla', 
+        link: 'products/aros-arcilla/aros-barquitos.html', 
         stock: 5, 
-        image:'./images/products/aros-arcilla/aros-arcilla-barco-pequeño-mandarina.jpg', 
+        image:'images/products/aros-arcilla/aros-arcilla-barco-pequeño-mandarina.jpg', 
         variacion: [
             {
                 color: 'mandarina',
                 id: '004NR',
-                image: './images/products/aros-arcilla/aros-arcilla-barco-pequeño-mandarina.jpg'
+                image: 'images/products/aros-arcilla/aros-arcilla-barco-pequeño-mandarina.jpg'
             },
             {
                 color: 'negro',
                 id: '004NE',
-                image: './images/products/aros-arcilla/aros-arcilla-barco-pequeño-negro.jpg'
+                image: 'images/products/aros-arcilla/aros-arcilla-barco-pequeño-negro.jpg'
             }
         ]
     },
     {
-        name:'Aros Pétalos', 
         id: '005', 
-        price: 550, 
-        category: 'Aros', 
+        name:'Aros Círculo Chico Manchas', 
+        price: 540, 
+        category: 'aros-arcilla',
+        link: 'products/aros-arcilla/aros-circulo-chico-manchas.html', 
         stock: 5, 
-        image:'./images/products/aros-arcilla/aros-petalos-blancos.jpg', 
+        image:'images/products/aros-arcilla/aros-circulo-chico-manchas.jpg', 
         variacion: [
             {
-                color: 'blanco',
-                id: '005BL',
-                image: './images/products/aros-arcilla/aros-petalos-blancos.jpg'
+                id: '005NR',
+                color: ['blanco', 'negro', 'naranja'],
+                image: 'images/products/aros-arcilla/aros-circulo-chico-manchas.jpg'
+            },
+            {
+                id: '005NR',
+                color: 'naranja',
+                image: 'images/products/aros-arcilla/aros-circulo-chico-naranja-manchas.jpg'
             }
         ]
     },
     {
-        name:'Aros Redondos', 
         id: '006', 
-        price: 600, 
-        category: 'Aros', 
+        name:'Aros Rendondos Manchas', 
+        price: 540, 
+        category: 'aros-arcilla',
+        link: 'products/aros-arcilla/aros-redondos-manchas.html', 
         stock: 5, 
-        image:'./images/products/aros-arcilla/aros-arcilla-redondos-salmon.jpg', 
+        image:'images/products/aros-arcilla/aros-redondos-arcilla-manchas.jpg', 
         variacion: [
             {
-                color: 'blanco',
-                id: '006BL',
-                image: './images/products/aros-arcilla/aros-arcilla-redondos-blanco.jpg'
-            },
-            {
-                color: 'salmon',
-                id: '006SL',
-                image: './images/products/aros-arcilla/aros-arcilla-redondos-salmon.jpg'
-            },
-            {
-                color: 'amarillo',
-                id: '006AM',
-                image: './images/products/aros-arcilla/aros-arcilla-redondos-amarillo.jpg'
-            },
-            {
+                id: '006MD',
                 color: 'mandarina',
-                id: '006MN',
-                image: './images/products/aros-arcilla/aros-arcilla-redondos-mandarina.jpg'
+                image: 'images/products/aros-arcilla/aros-redondos-arcilla-manchas.jpg'
             },
+        ]
+    },
+    {
+        id: '007', 
+        name:'Aros Circulo Doble Manchas', 
+        price: 540, 
+        category: 'aros-arcilla',
+        link: 'products/aros-arcilla/aros-circulo-doble-manchas.html', 
+        stock: 5, 
+        image:'images/products/aros-arcilla/aros-circulo-doble-manchas.jpg', 
+        variacion: [
             {
-                color: 'negro',
-                id: '006NE',
-                image: './images/products/aros-arcilla/aros-arcilla-redondos-negro.jpg'
+                id: '007MD',
+                color: 'mandarina',
+                image: 'images/products/aros-arcilla/aros-circulo-doble-manchas.jpg'
             },
+        ]
+    },
+    {
+        id: '008', 
+        name:'Aros Negros Tres Piezas', 
+        price: 540, 
+        category: 'aros-arcilla', 
+        link: 'products/aros-arcilla/aros-negros-tres-piezas.html', 
+        stock: 5, 
+        image:'images/products/aros-arcilla/aros-negros-tres-piezas.jpg', 
+        variacion: [
             {
-                color: 'rojo',
-                id: '006RO',
-                image: './images/products/aros-arcilla/aros-arcilla-redondos-rojo.jpg'
+                id: '008MD',
+                color: 'mandarina',
+                image: 'images/products/aros-arcilla/aros-circulo-doble-manchas.jpg'
+            },
+        ]
+    },
+    {
+        id: '009', 
+        name:'Aros Pétalos', 
+        price: 550, 
+        category: 'aros-arcilla',
+        link: 'products/aros-arcilla/aros-petalos.html', 
+        stock: 5, 
+        image:'images/products/aros-arcilla/aros-petalos-blancos.jpg', 
+        variacion: [
+            {
+                id: '009BL',
+                color: 'blanco',
+                image: 'images/products/aros-arcilla/aros-petalos-blancos.jpg'
             }
         ]
     },
     {
-        name:'Aros Tres Piezas', 
-        id: '007', 
+        id: '010', 
+        name:'Aros Redondos', 
         price: 600, 
-        category: 'Aros', 
+        category: 'aros-arcilla',
+        link: 'products/aros-arcilla/aros-redondos.html', 
         stock: 5, 
-        image:'./images/products/aros-arcilla/aros-arcilla-tres-piezas-blanco.jpg', 
+        image:'images/products/aros-arcilla/aros-arcilla-redondos-salmon.jpg', 
         variacion: [
             {
+                id: '010BL',
                 color: 'blanco',
-                id: '007BL',
-                image: './images/products/aros-arcilla/aros-arcilla-tres-piezas-blanco.jpg'
+                image: 'images/products/aros-arcilla/aros-arcilla-redondos-blanco.jpg'
+            },
+            {
+                id: '010SL',
+                color: 'salmon',
+                image: 'images/products/aros-arcilla/aros-arcilla-redondos-salmon.jpg'
+            },
+            {
+                id: '010AM',
+                color: 'amarillo',
+                image: 'images/products/aros-arcilla/aros-arcilla-redondos-amarillo.jpg'
+            },
+            {
+                id: '010MD',
+                color: 'mandarina',
+                image: 'images/products/aros-arcilla/aros-arcilla-redondos-mandarina.jpg'
+            },
+            {
+                id: '010NE',
+                color: 'negro',
+                image: 'images/products/aros-arcilla/aros-arcilla-redondos-negro.jpg'
+            },
+            {
+                id: '010RO',
+                color: 'rojo',
+                image: 'images/products/aros-arcilla/aros-arcilla-redondos-rojo.jpg'
+            }
+        ]
+    },
+    {
+        id: '011', 
+        name:'Aros Tres Piezas', 
+        price: 600, 
+        category: 'aros-arcilla',
+        link: 'products/aros-arcilla/aros-tres-piezas.html', 
+        stock: 5, 
+        image:'images/products/aros-arcilla/aros-arcilla-tres-piezas-blanco.jpg', 
+        variacion: [
+            {
+                id: '011BL',
+                color: 'blanco',
+                image: 'images/products/aros-arcilla/aros-arcilla-tres-piezas-blanco.jpg'
             },
         ]
     },
     {
+        id: '012', 
+        name:'Aros Acqua', 
+        price: 550, 
+        category: 'aros',
+        link: 'products/aros/aros-acqua.html', 
+        stock: 5, 
+        image:'images/products/aros/aros-acqua.jpg', 
+        variacion: [
+            {
+                id: '012BL',
+                color: 'celeste',
+                image: 'images/products/aros/aros-acqua.jpg'
+            }
+        ]
+    },
+    {
+        id: '013', 
+        name:'Aros Ostras', 
+        price: 550, 
+        category: 'aros', 
+        link: 'products/aros/aros-ostras.html', 
+        stock: 5, 
+        image:'images/products/aros/aros-ostras.jpg', 
+        variacion: [
+            {
+                id: '013BL',
+                color: 'plateado',
+                image: 'images/products/aros/aros-ostras.jpg'
+            }
+        ]
+    },
+    {
+        id: '014', 
+        name:'Aros Largos Frida', 
+        price: 550, 
+        category: 'aros', 
+        link: 'products/aros/aros-largos-frida.html', 
+        stock: 5, 
+        image:'images/products/aros/aros-largos-frida.jpg', 
+        variacion: [
+            {
+                id: '014BL',
+                color: 'verde',
+                image: 'images/products/aros/aros-largos-frida.jpg'
+            }
+        ]
+    },
+    {
+        name:'Aros Laureles', 
+        id: '015', 
+        price: 550, 
+        category: 'aros', 
+        link: 'products/aros/aros-laureles.html', 
+        stock: 5, 
+        image:'images/products/aros/aros-laureles-plateados.jpg', 
+        variacion: [
+            {
+                id: '015BL',
+                color: 'plateado',
+                image: 'images/products/aros/aros-laureles-plateados.jpg'
+            },
+            {
+                id: '015BL',
+                color: 'negro',
+                image: 'images/products/aros/aros-laureles-negros.jpg'
+            }
+        ]
+    },
+    {
+        id: '016', 
         name:'Collar Audrey', 
-        id: '008', 
         price: 2400, 
-        category: 'Collares', 
+        category: 'collares',
+        link: 'products/collares/collar-audrey.html', 
         stock: 2, 
-        image:'./images/products/collares/collar-audrey.jpg', 
+        image:'images/products/collares/collar-audrey.jpg', 
         variacion: [
             {
+                id: '016PL',
                 color: 'plateado',
-                id: '008PL',
-                image: './images/products/collares/collar-audrey.jpg'
+                image: 'images/products/collares/collar-audrey.jpg'
             },
         ]
     },
     {
+        id: '017', 
         name:'Collar Estrellas', 
-        id: '009', 
         price: 1500, 
-        category: 'Collares', 
+        category: 'collares',
+        link: 'products/collares/collar-estrellas.html', 
         stock: 2, 
-        image:'./images/products/collares/collar-estrellas.jpg', 
+        image:'images/products/collares/collar-estrellas.jpg', 
         variacion: [
             {
+                id: '017PL',
                 color: 'plateado',
-                id: '009PL',
-                image: './images/products/collares/collar-estrellas.jpg'
+                image: 'images/products/collares/collar-estrellas.jpg'
             },
         ]
     },
     {
+        id: '018', 
         name:'Collar Love', 
-        id: '007', 
         price: 1400, 
-        category: 'Collares', 
+        category: 'collares',
+        link: 'products/collares/collar-love.html', 
         stock: 2, 
-        image:'./images/products/collares/collar-love.jpg', 
+        image:'images/products/collares/collar-love.jpg', 
         variacion: [
             {
+                id: '018PL',
                 color: 'plateado',
-                id: '010PL',
-                image: './images/products/collares/collar-love.jpg'
+                image: 'images/products/collares/collar-love.jpg'
             },
         ]
     },
     {
+        id: '019',
         name:'Collar Mariposas', 
-        id: '007', 
         price: 1600, 
-        category: 'Collares', 
+        category: 'collares',
+        link: 'products/collares/collar-mariposas.html', 
         stock: 2, 
-        image:'./images/products/collares/collar-mariposas.jpg', 
+        image:'images/products/collares/collar-mariposas.jpg', 
         variacion: [
             {
+                id: '019DO',
+                color: 'dorado',
+                image: 'images/products/collares/collar-mariposas.jpg'
+            },
+        ]
+    },
+    {
+        id: '020', 
+        name:'Collar Mariposa', 
+        price: 1600, 
+        category: 'collares',
+        link: 'products/collares/collar-mariposa.html', 
+        stock: 2, 
+        image:'images/products/collares/collar-mariposa.jpg', 
+        variacion: [
+            {
+                id: '020DO',
+                color: 'dorado',
+                image: 'images/products/collares/collar-mariposa.jpg'
+            },
+        ]
+    },
+    {
+        id: '021', 
+        name:'Collar Muffin', 
+        price: 1600, 
+        category: 'collares', 
+        link: 'products/collares/collar-muffin.html', 
+        stock: 2, 
+        image:'images/products/collares/collar-muffin.jpg', 
+        variacion: [
+            {
+                id: '0121PL',
                 color: 'plateado',
-                id: '011PL',
-                image: './images/products/collares/collar-mariposas.jpg'
+                image: 'images/products/collares/collar-muffin.jpg'
+            },
+        ]
+    },
+    {
+        id: '022', 
+        name:'Collar Corona', 
+        price: 1600, 
+        category: 'collares', 
+        link: 'products/collares/collar-corona.html', 
+        stock: 2, 
+        image:'images/products/collares/collar-corona.jpg', 
+        variacion: [
+            {
+                id: '022PL',
+                color: 'plateado',
+                image: 'images/products/collares/collar-corona.jpg'
+            },
+        ]
+    },
+    {
+        id: '023', 
+        name:'Collar Candado', 
+        price: 1600, 
+        category: 'collares', 
+        link: 'products/collares/collar-candado.html', 
+        stock: 2, 
+        image:'images/products/collares/collar-candado.jpg', 
+        variacion: [
+            {
+                id: '023PL',
+                color: 'plateado',
+                image: 'images/products/collares/collar-candado.jpg'
+            },
+        ]
+    },
+    {
+        id: '024', 
+        name:'Collar Piedra', 
+        price: 1600, 
+        category: 'collares', 
+        link: 'products/collares/collar-piedra.html', 
+        stock: 2, 
+        image:'images/products/collares/collar-piedra.jpg', 
+        variacion: [
+            {
+                id: '024PL',
+                color: 'plateado',
+                image: 'images/products/collares/collar-piedra.jpg'
+            },
+        ]
+    },
+    {
+        id: '025', 
+        name:'Pulsera Secret', 
+        price: 1600, 
+        category: 'pulseras', 
+        link: 'products/pulseras/pulsera-secret.html', 
+        stock: 2, 
+        image:'images/products/pulseras/pulsera-secret.jpg', 
+        variacion: [
+            {
+                id: '025SL',
+                color: 'salmon',
+                image: 'images/products/pulseras/pulsera-secret.jpg'
             },
         ]
     },
 
 ]
-
-// Filtro de productos por precio
-
-function priceFilter(products, price) {
-    let prices = []
-    for(let i=0; i < products.length; i++) {
-        if(products[i].price <= price) {
-            prices.push(`- ${products[i].name}`)
-        }
-    }
-    let listedProducts = prices.join(' ')
-    return `Los productos con valores menores a $${price} son: ${listedProducts}`;
-}
-
-// Funcion para buscar productos por nombre
-
-function findProduct(product) {
-    let matchProductName = product.toLowerCase();
-    let productFound = products.filter(prod => prod.name.toLowerCase().includes(matchProductName));
-    let matchedProducts = [];
-    for(let i=0; i < productFound.length; i++) {
-        matchedProducts.push(productFound[i].name);
-    }
-    return matchedProducts;
-}
-
-
-// Funcion para buscar productos por categoría
-
-function findCategory(category) {
-    let matchCategoryName = category.toLowerCase();
-    let productFound = products.filter(cat => cat.category.toLowerCase().includes(matchCategoryName));
-    let matchedProducts = [];
-    for(let i=0; i < productFound.length; i++) {
-        matchedProducts.push(productFound[i].name);
-    }
-    return matchedProducts;
-}
-
-// Renderizado de productos en inicio
-
-let productGrids = document.querySelector('.featured-products-grid');
-
-for (const product of products) {
-    let card = document.createElement('div');
-    card.className = 'product-card'
-    card.innerHTML = ` <div class="product-card-image">
-                            <img src=${product.image} alt="product card image">
-                        </div>
-                        <div class="product-card-description">
-                            <div class="product-card-info">
-                                <p class="product-card-name">${product.name}</p>
-                                <p class="product-card-price">$${product.price.toFixed(2)}</p>
-                            </div>
-                            <div class="product-card-stars">
-                                <img src="./images/stars.png" alt="product card stars">
-                            </div>
-                        </div>
-    `
-    productGrids.append(card);
-}
 
 

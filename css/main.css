@@ -64,8 +64,11 @@ h3 {
       font-size: 2.4rem; } }
 
 p {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 400; }
+  @media only screen and (min-width: 600px) {
+    p {
+      font-size: 1.6rem; } }
 
 body {
   background-color: #FFFFFF; }
@@ -91,7 +94,8 @@ body {
 .header {
   padding: 0 24px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   padding-top: 48px;
   padding-bottom: 48px;
   background-color: #F1F1F1; }
@@ -102,7 +106,7 @@ body {
     .header {
       padding: 0 144px; } }
   .header-logo {
-    margin-bottom: 24px; }
+    margin-bottom: 32px; }
   .header .hamb-menu-btn {
     border: none;
     background-color: transparent; }
@@ -121,16 +125,39 @@ body {
       .header .nav {
         flex-direction: row;
         gap: 64px; } }
-    .header .nav--left-side, .header .nav--right-side {
-      display: none; }
+    .header .nav--list-menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+      background: white;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 10;
+      transition: 300ms;
+      transform: translateY(-100%); }
       @media only screen and (min-width: 1024px) {
-        .header .nav--left-side, .header .nav--right-side {
-          display: block; } }
+        .header .nav--list-menu {
+          position: static;
+          transform: translateY(0);
+          background-color: transparent;
+          flex-direction: row;
+          gap: 64px; } }
+    .header .nav--list .close-menu {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 32px; }
       @media only screen and (min-width: 1024px) {
-        .header .nav--left-side ul, .header .nav--right-side ul {
-          display: flex;
-          align-items: center;
-          gap: 32px; } }
+        .header .nav--list .close-menu {
+          display: none; } }
+    .header .nav--list .show-menu {
+      transform: translateY(0); }
 
 .main-category {
   padding: 0 24px;
@@ -365,6 +392,7 @@ body {
     padding: 8px 16px;
     background-color: #B05258;
     color: #FFFFFF;
+    font-size: 1.6rem;
     font-family: 'Libre Baskerville', serif;
     border: none;
     cursor: pointer;
@@ -410,6 +438,23 @@ body {
     .catalogue-filters-title {
       text-align: center;
       margin-bottom: 24px; }
+    .catalogue-filters-categories {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 24px; }
+      .catalogue-filters-categories .categories-filter-btn {
+        display: block;
+        border: none;
+        background-color: transparent;
+        font-family: 'Libre Baskerville', serif;
+        font-size: 2rem;
+        font-weight: 400;
+        cursor: pointer;
+        transition: 300ms;
+        font-size: 1.6rem; }
+        .catalogue-filters-categories .categories-filter-btn:hover {
+          color: #B05258; }
     .catalogue-filters .back-btn {
       background-color: transparent;
       border: none;
@@ -431,9 +476,12 @@ body {
       .catalogue-filters-display-btn:hover {
         color: #B05258; }
     .catalogue-filters label {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       font-weight: 400;
       margin-bottom: 8px; }
+      @media only screen and (min-width: 600px) {
+        .catalogue-filters label {
+          font-size: 1.6rem; } }
     .catalogue-filters-input {
       padding: 16px;
       height: 33px;
@@ -449,6 +497,7 @@ body {
       padding: 8px 16px;
       background-color: #B05258;
       color: #FFFFFF;
+      font-size: 1.6rem;
       font-family: 'Libre Baskerville', serif;
       border: none;
       cursor: pointer;
@@ -462,6 +511,180 @@ body {
 .show-filters {
   transform: translateY(0%);
   transition: 300ms; }
+
+.category-active {
+  color: #B05258;
+  font-size: 2rem;
+  font-weight: bold; }
+
+.hide {
+  display: none; }
+
+.product-page {
+  padding: 0 24px;
+  padding-top: 32px; }
+  @media only screen and (min-width: 768px) {
+    .product-page {
+      padding: 0 72px; } }
+  @media only screen and (min-width: 1366px) {
+    .product-page {
+      padding: 0 144px; } }
+  .product-page p, .product-page label {
+    font-family: 'Montserrat', sans-serif; }
+  .product-page .breadcrumbs {
+    margin-bottom: 24px; }
+    .product-page .breadcrumbs p {
+      font-weight: 300;
+      font-size: 1.2rem; }
+  .product-page-name {
+    display: flex;
+    justify-content: space-between; }
+    .product-page-name h1 {
+      font-size: 2.4rem; }
+    .product-page-name .favorite-btn {
+      width: 25px;
+      cursor: pointer; }
+      .product-page-name .favorite-btn .fav-check {
+        border: none;
+        background-color: transparent;
+        object-fit: cover;
+        width: 100%; }
+      .product-page-name .favorite-btn .favorite-icon {
+        fill: #909090; }
+      .product-page-name .favorite-btn .fav-product {
+        fill: #B05258; }
+  .product-page-info--price {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .product-page-info--price p {
+      font-size: 2.4rem;
+      font-weight: 300; }
+    .product-page-info--price .product-id {
+      font-size: 1.4rem; }
+  .product-page-info--stock {
+    margin-bottom: 24px; }
+    .product-page-info--stock p span {
+      font-weight: bold; }
+  .product-page-variations {
+    margin-bottom: 24px; }
+    .product-page-variations--colors {
+      display: flex;
+      gap: 8px; }
+      .product-page-variations--colors .variation-color {
+        text-align: center; }
+        .product-page-variations--colors .variation-color figure {
+          width: 72px; }
+          .product-page-variations--colors .variation-color figure img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%; }
+        .product-page-variations--colors .variation-color p {
+          font-size: 1.2rem; }
+  .product-page-purchase {
+    margin-bottom: 32px; }
+    .product-page-purchase--quantity {
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      .product-page-purchase--quantity label {
+        font-size: 1.4rem; }
+    .product-page-purchase .product-quantity {
+      width: 80px;
+      height: 40px;
+      background-color: #F1F1F1;
+      border: none;
+      border-radius: 4px;
+      padding: 8px;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif; }
+    .product-page-purchase--btns {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 24px; }
+      .product-page-purchase--btns .purchase-btn {
+        width: 100%;
+        height: 40px;
+        background-color: #B05258;
+        color: #FFFFFF;
+        border: none;
+        border-radius: 4px;
+        font-family: 'Baskerville', serif;
+        font-size: 1.6rem;
+        cursor: pointer; }
+      .product-page-purchase--btns .cart-btn {
+        width: 100%;
+        height: 40px;
+        background-color: #B05258;
+        color: #FFFFFF;
+        border: none;
+        border-radius: 4px;
+        font-family: 'Baskerville', serif;
+        font-size: 1.6rem;
+        cursor: pointer;
+        background-color: #E5E5E5;
+        color: #323232; }
+    .product-page-purchase .payment-methods {
+      text-align: center; }
+      .product-page-purchase .payment-methods a {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.4rem;
+        text-decoration: underline; }
+  .product-page-related-products {
+    padding-top: 32px;
+    margin-bottom: 32px; }
+    .product-page-related-products h2 {
+      text-align: center;
+      margin-bottom: 24px; }
+    .product-page-related-products .related-products {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+  .product-page .gallery {
+    width: 100%;
+    margin-bottom: 16px; }
+    .product-page .gallery img {
+      object-fit: cover;
+      width: 100%; }
+
+.favorites {
+  padding: 0 24px;
+  padding-top: 32px; }
+  @media only screen and (min-width: 768px) {
+    .favorites {
+      padding: 0 72px; } }
+  @media only screen and (min-width: 1366px) {
+    .favorites {
+      padding: 0 144px; } }
+  .favorites p {
+    font-family: 'Montserrat', sans-serif; }
+  .favorites .breadcrumbs {
+    margin-bottom: 24px; }
+    .favorites .breadcrumbs p {
+      font-weight: 300;
+      font-size: 1.2rem; }
+  .favorites h1 {
+    margin-bottom: 24px; }
+  .favorites-list {
+    margin-bottom: 64px; }
+    .favorites-list-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 24px; }
+      .favorites-list-item img {
+        width: 88px; }
+      .favorites-list-item-info {
+        display: flex;
+        flex-direction: column;
+        gap: 8px; }
+        .favorites-list-item-info .delete {
+          border: none;
+          background-color: transparent;
+          color: #B05258; }
 
 .footer {
   padding: 0 24px;

@@ -30,6 +30,18 @@
             margin-bottom: $spacing-sections-x-small
         }
 
+        &-categories {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: $spacing-sections-x-small;
+
+            .categories-filter-btn {
+                @include see-products-btn;
+                font-size: 1.6rem;
+            }
+        }
+
         .back-btn {
             background-color: transparent;
             border: none;
@@ -84,4 +96,14 @@
 .show-filters {
     transform: translateY(0%);
     transition: 300ms;
+}
+
+.category-active {
+    color: $clr-main-color;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.hide {
+    display: none;
 }

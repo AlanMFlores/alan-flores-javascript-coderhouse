@@ -25,9 +25,13 @@ const renderProducts = () => {
         let card = document.createElement('div');
         card.classList.add('product-card', product.category, 'hide');
         card.innerHTML = ` <div class="product-card-image">
-                                <a href='../${product.link}'>
                                     <img src=../${product.image} alt="product card image">
                                 </a>
+                                <div class="product-card-favorite">
+                                    <button class="fav-check" id="false">
+                                        <i class="fa-solid fa-heart" id=${product.id}></i>
+                                    </button>
+                                </div>
                             </div>
                             <div class="product-card-description">
                                 <div class="product-card-info">
@@ -37,6 +41,10 @@ const renderProducts = () => {
                                 <div class="product-card-stars">
                                     <img src="../images/stars.png" alt="product card stars">
                                 </div>
+                            </div>
+                            <div class="product-card-purchase">
+                                <button class="cart-btn">Agregar al Carrito</buton>
+                                <button class="purchase-btn">Comprar</buton>
                             </div>
         `
         catalogueGrid.append(card);

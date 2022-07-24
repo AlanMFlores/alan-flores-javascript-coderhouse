@@ -33,8 +33,7 @@ a {
 
 a {
   text-decoration: none;
-  color: #323232;
-  font-size: calc($fs-); }
+  color: #323232; }
 
 h1 {
   font-size: 3.2rem;
@@ -133,7 +132,7 @@ body {
       gap: 32px;
       background: white;
       width: 100%;
-      position: absolute;
+      position: fixed;
       left: 0;
       top: 0;
       right: 0;
@@ -289,6 +288,10 @@ body {
       bottom: 0;
       left: 0;
       background-color: #F1F1F1; }
+  .product-card-favorite {
+    position: absolute;
+    top: 16px;
+    right: 16px; }
   .product-card-image img {
     width: 274px;
     margin-bottom: 8px;
@@ -301,6 +304,33 @@ body {
   .product-card-name {
     margin-bottom: 4px;
     font-weight: bold; }
+  .product-card-purchase {
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px; }
+    .product-card-purchase .purchase-btn {
+      width: 100%;
+      height: 40px;
+      background-color: #B05258;
+      color: #FFFFFF;
+      border: none;
+      border-radius: 4px;
+      font-family: 'Baskerville', serif;
+      font-size: 1.6rem;
+      cursor: pointer; }
+    .product-card-purchase .cart-btn {
+      width: 100%;
+      height: 40px;
+      background-color: #B05258;
+      color: #FFFFFF;
+      border: none;
+      border-radius: 4px;
+      font-family: 'Baskerville', serif;
+      font-size: 1.6rem;
+      cursor: pointer;
+      background-color: #F1F1F1;
+      color: #323232;
+      margin-bottom: 8px; }
 
 .see-more-products-btn {
   margin-bottom: 64px; }
@@ -520,6 +550,22 @@ body {
 .hide {
   display: none; }
 
+.fav-check {
+  width: 25px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  object-fit: cover;
+  width: 100%; }
+  .fav-check .fa-heart {
+    font-size: 2.4rem;
+    color: #909090; }
+  .fav-check .like-product {
+    color: #B05258; }
+
+.product-code {
+  display: none; }
+
 .product-page {
   padding: 0 24px;
   padding-top: 32px; }
@@ -541,18 +587,6 @@ body {
     justify-content: space-between; }
     .product-page-name h1 {
       font-size: 2.4rem; }
-    .product-page-name .favorite-btn {
-      width: 25px;
-      cursor: pointer; }
-      .product-page-name .favorite-btn .fav-check {
-        border: none;
-        background-color: transparent;
-        object-fit: cover;
-        width: 100%; }
-      .product-page-name .favorite-btn .favorite-icon {
-        fill: #909090; }
-      .product-page-name .favorite-btn .fav-product {
-        fill: #B05258; }
   .product-page-info--price {
     margin-bottom: 24px;
     display: flex;
@@ -561,8 +595,6 @@ body {
     .product-page-info--price p {
       font-size: 2.4rem;
       font-weight: 300; }
-    .product-page-info--price .product-id {
-      font-size: 1.4rem; }
   .product-page-info--stock {
     margin-bottom: 24px; }
     .product-page-info--stock p span {
@@ -651,14 +683,41 @@ body {
       width: 100%; }
 
 .favorites {
-  padding: 0 24px;
-  padding-top: 32px; }
-  @media only screen and (min-width: 768px) {
-    .favorites {
-      padding: 0 72px; } }
-  @media only screen and (min-width: 1366px) {
-    .favorites {
-      padding: 0 144px; } }
+  border: none;
+  font-family: 'Baskerville';
+  font-size: 1.6rem;
+  cursor: pointer; }
+  .favorites-container {
+    padding: 0 24px;
+    position: absolute;
+    width: 90%;
+    height: fit-content;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    z-index: 10;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 10px 1px rgba(144, 144, 144, 0.4);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin-top: 24px;
+    transform: translateX(-100%);
+    transition: 300ms; }
+    @media only screen and (min-width: 768px) {
+      .favorites-container {
+        padding: 0 72px; } }
+    @media only screen and (min-width: 1366px) {
+      .favorites-container {
+        padding: 0 144px; } }
+    .favorites-container-title {
+      margin-bottom: 16px; }
+    .favorites-container .close-modal-btn {
+      position: absolute;
+      right: 16px;
+      top: 16px;
+      width: 24px; }
   .favorites p {
     font-family: 'Montserrat', sans-serif; }
   .favorites .breadcrumbs {
@@ -685,6 +744,30 @@ body {
           border: none;
           background-color: transparent;
           color: #B05258; }
+
+.show-fav-modal {
+  transform: translateX(5%); }
+
+.show-notification {
+  position: fixed;
+  z-index: 50;
+  right: 0;
+  display: inline;
+  padding: 8px;
+  background-color: #B05258;
+  color: #FFFFFF;
+  font-size: 1.6rem;
+  animation: show-notification 2000ms linear forwards; }
+
+@keyframes show-notification {
+  0% {
+    transform: translateY(-100%); }
+  25% {
+    transform: translateY(0%); }
+  75% {
+    transform: translateY(0%); }
+  100% {
+    transform: translateY(-200%); } }
 
 .footer {
   padding: 0 24px;

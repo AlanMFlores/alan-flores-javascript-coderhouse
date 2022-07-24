@@ -28,6 +28,12 @@
         }
     }
 
+    &-favorite {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+    }
+
     &-image img{
         width: 274px;
         margin-bottom: $spacing-var;
@@ -46,6 +52,23 @@
     &-name {
         margin-bottom: $spacing-var / 2;
         font-weight: bold;
+    }
+
+    &-purchase {
+        display: flex;
+        flex-direction: column;
+        margin-top: $spacing-sections-x-small / 2;
+
+        .purchase-btn {
+            @include purchase-btn;
+        }
+
+        .cart-btn {
+            @include purchase-btn;
+            background-color: $clr-gray-bg;
+            color: $clr-dark-color;
+            margin-bottom: $spacing-var;
+        }
     }
 
 }

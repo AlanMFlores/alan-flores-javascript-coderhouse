@@ -1,6 +1,40 @@
 .favorites {
-    @include columns-padding;
-    padding-top: $spacing-sections-small;
+    border: none;
+    font-family: 'Baskerville';
+    font-size: 1.6rem;
+    cursor: pointer;
+
+    &-container {
+        @include columns-padding;
+        position: absolute;
+        width: 90%;
+        height: fit-content;
+        padding-top: $spacing-sections-medium;
+        padding-bottom: $spacing-sections-medium;
+        z-index: 10;
+        border-radius: 5px;
+        background-color: $clr-white-color;
+        box-shadow: 1px 1px 10px 1px rgba(144,144,144,.4);
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin-top: 24px;
+        transform: translateX(-100%);
+        transition: 300ms;
+
+        &-title {
+            margin-bottom: $spacing-sections-small / 2;
+        }
+
+        .close-modal-btn {
+            position: absolute;
+            right: 16px;
+            top: 16px;
+            width: 24px;
+        }
+
+    }
 
     p {
         font-family: 'Montserrat', sans-serif;
@@ -45,6 +79,8 @@
             }
         }
     }
+}
 
-
+.show-fav-modal {
+    transform: translateX(5%);
 }

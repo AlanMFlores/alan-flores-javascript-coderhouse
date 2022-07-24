@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../images/fae-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/main.css">
+    <script src="https://kit.fontawesome.com/e6d83a41ae.js" crossorigin="anonymous"></script>
     <title>Catálogo | FAE</title>
 </head>
 <body>
@@ -33,7 +34,7 @@
                             <a href="">Registrarse/Iniciar Sesión</a>
                         </li>
                         <li class="nav--list-item">
-                            <a href="../pages/favorites.html">Favoritos</a>
+                            <button class="favorites" id="fav-modal-btn">Favoritos</button>
                         </li>
                         <li class="nav--list-item">
                             <a href=""><img src="../images/cart-icon.png" alt=""></a>
@@ -88,22 +89,21 @@
                         <input type="button" value="Filtrar por Color" id="product-color-submit" class="catalogue-filters-btn">
                     </form>
                 </div>
-                <!-- <div class="catalogue-filters-form">
-                    <form action="">
-                        <label for="">Nombre de la Categoría</label>
-                        <input type="text" name="" id="" class="catalogue-filters-input" placeholder="Pulseras">
-                        <input type="button" value="Filtrar por Categoría" class="catalogue-filters-btn">
-                    </form>
-                </div> -->
 
             </section>
 
             <section class="catalogue-products">
-
+                
             </section>
 
             </div>
         </main>
+
+        <section class="favorites-container">
+            <img src="../images/close.png" alt="" class="close-modal-btn">
+            <h2 class="favorites-container-title">Tus Favoritos</h2>
+            <h3 class="favorites-container-empty">No hay productos agregados.</h3>
+        </section>
 
         <footer class="footer">
             <div class="footer-info">
@@ -138,10 +138,15 @@
             </div>
             <small>Designed by Alan Flores - 2022</small>
         </footer>
+
     </div>
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../products.js"></script>
     <script src="../animations.js"></script>
     <script src="../catalogue.js"></script>
+    <script src="../favorite.js"></script>
+    <script src="../shopping-cart.js"></script>
 </body>
 </html>

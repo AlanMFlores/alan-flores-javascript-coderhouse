@@ -27,3 +27,8 @@
         margin-bottom: $spacing-sections-x-small;
     }
 }
+
+.error-render {
+    grid-template-columns: auto;
+    margin-bottom: $spacing-sections-small;
+}

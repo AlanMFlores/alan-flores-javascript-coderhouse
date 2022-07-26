@@ -231,6 +231,10 @@ body {
   .featured-products-title {
     margin-bottom: 24px; }
 
+.error-render {
+  grid-template-columns: auto;
+  margin-bottom: 32px; }
+
 .categories {
   padding: 0 24px;
   display: grid;
@@ -537,6 +541,16 @@ body {
   .catalogue-products {
     display: grid;
     justify-content: center; }
+    @media only screen and (min-width: 768px) {
+      .catalogue-products {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        max-width: 624px;
+        margin: 0 auto; } }
+    @media only screen and (min-width: 1024px) {
+      .catalogue-products {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 936px; } }
 
 .show-filters {
   transform: translateY(0%);

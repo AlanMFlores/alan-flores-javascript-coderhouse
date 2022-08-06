@@ -47,3 +47,9 @@ const getProducts = async () => {
 }
 
 getProducts();
+
+// Renderizado Inicial
+
+window.onload = () => {
+    filterProduct('todos');
+}

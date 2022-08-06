@@ -50,9 +50,9 @@ function filterProduct(value) {
 
 // Renderizado Inicial
 
-window.onload = () => {
-    filterProduct('todos');
-}
+// window.onload = () => {
+//     filterProduct('todos');
+// }
 
 // Filtro de los Productos según Categorías
 
